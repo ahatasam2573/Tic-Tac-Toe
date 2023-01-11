@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500&family=Raleway:wght@400;600;800;900&display=swap');
+
 .container{
     width: 100%;
     height: 100vh;
@@ -7,6 +9,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .left-wrapper{
@@ -35,6 +38,7 @@
     align-items: center;
     cursor: pointer;
     margin-top: 30px;
+    color: rgb(67, 4, 104);
 }
 
 /* .right-wrapper{
@@ -74,7 +78,43 @@
     width: 350px;
     height: 350px;
     margin-right: 40px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.winner-text{
+    font-size: 50px;
+    font-weight: 800;
+    color: rgb(8, 169, 243);
+    padding-left: 20px;
+}
+
+img{
+    margin-left: 12px;
+}
+
+@media screen and (max-width: 767px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .left-text{
+        font-size: 30px;
+        text-align: center;
+    }
+    .left-button{
+        width: 200px;
+        font-size: 14px;
+        height: 40px;
+        margin-bottom: 20px;
+        margin-left: 30px
+    }
+    .left-wrapper{
+        width: 100%;
+    }
+    .winner-text{
+        width: 100%;
+        font-size: 30px;
+    }
 }

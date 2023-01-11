@@ -8,6 +8,8 @@
     font-size: 80px;
     font-weight: bolder;
     cursor: pointer;
+    background-color: rgb(252, 222, 185);
+    border: none;
 }
 
 .border-RB{
@@ -20,4 +22,17 @@
 }
 .border-B{
     border-bottom: 2px solid #e2e2e2;
+}
+
+.x-color{
+    color: rgb(9, 117, 90);
+}
+.o-color{
+    color: rgb(44, 155, 247);
+}
+
+@media screen and (max-width: 767px){
+    .square-container{
+        margin-left: 20px;
+    }
 }
