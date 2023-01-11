@@ -54,7 +54,8 @@
     margin-right: 20px;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    border-bottom: 5px solid palevioletred;
+    border-bottom: 5px solid rgb(143, 139, 140);
+    color: rgb(209, 209, 198);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,9 +63,11 @@
 
 .first-player{
     color: rgb(7, 100, 100);
+    border-bottom: 5px solid palevioletred;
 }
 .second-player{
     color: blueviolet;
+    border-bottom: 5px solid palevioletred;
 }
 
 .games-ground{

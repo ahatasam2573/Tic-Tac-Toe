@@ -2,11 +2,10 @@ import Square from "./components/Square";
 import './App.css';
 import { useState } from "react";
 
-const initialGameGround = ["", "", "", "", "", "", "", "", ""];
 
 function App() {
 
-  const [groundState, setGroundState] = useState(initialGameGround);
+  const [groundState, setGroundState] = useState('');
   const [steps, setSteps] = useState(0);
   const onClickHandler = event => {
     const copyGameGround = [...groundState]
@@ -16,20 +15,26 @@ function App() {
       setGroundState(copyGameGround);
     }
   }
+
+  const restartGame = () => {
+    setGroundState('');
+    setSteps(0);
+  }
+
   return (
     <div className="container">
       <div className="left-wrapper">
         <div className="left-text">
           Let's play the game
         </div>
-        <div className="left-button">Start a New Game</div>
+        <div className="left-button" onClick={restartGame}>Start a New Game</div>
       </div>
       <div className="right-wrapper">
         <div className="players">
-          <div className="player first-player">
+          <div className={`player ${steps % 2 === 0 && "first-player"}`}>
             Player X
           </div>
-          <div className="player second-player">
+          <div className={`player ${steps % 2 === 1 && "second-player"}`}>
             Player O
           </div>
         </div>
